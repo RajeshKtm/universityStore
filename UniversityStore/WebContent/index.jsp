@@ -9,7 +9,13 @@
 <body>
 	<h1>Welcome to MUM University Store</h1><br/>
 	
+	
+	
 	This site is build to help students for online booking and purchasing university items.<br/>
 	Payment will be done by payment gateway.<br/>
+	
+	<br/><br/>
+	
+	<h2>Developed by Three Muskeeters </h2>
 </body>
 </html>
