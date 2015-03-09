@@ -54,14 +54,14 @@ public class AppConfig {
 	public HibernateTransactionManager txManager() {
 		return new HibernateTransactionManager(sessionFactory());
 	}
-//
-//	@Bean
-//	public InternalResourceViewResolver viewResolver() {
-//		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-//		viewResolver.setViewClass(JstlView.class);
-//		viewResolver.setPrefix("/WEB-INF/jsp/");
-//		viewResolver.setSuffix(".jsp");
-//		return viewResolver;
-//	}
+
+	@Bean
+	public InternalResourceViewResolver viewResolver() {
+		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+		viewResolver.setViewClass(JstlView.class);
+		viewResolver.setPrefix("/WEB-INF/jsp/");
+		viewResolver.setSuffix(".jsp");
+		return viewResolver;
+	}
 
 }
