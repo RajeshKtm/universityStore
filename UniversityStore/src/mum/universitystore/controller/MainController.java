@@ -2,6 +2,11 @@ package mum.universitystore.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import mum.universitystore.model.Product;
+import mum.universitystore.service.PhoneService;
+import mum.universitystore.service.ProductService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.LockedException;
@@ -16,6 +21,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MainController {
+	
+	@Autowired 
+	ProductService productService;
+	
+	@Autowired
+	PhoneService phoneService;
 
 	@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
 	public ModelAndView defaultPage() {
@@ -23,10 +34,11 @@ public class MainController {
 		ModelAndView model = new ModelAndView();
 		model.addObject("title", "Spring Security + Hibernate Example");
 		model.addObject("message", "This is default page!");
-		model.setViewName("hello");
+		model.setViewName("ProductForm");
 		return model;
 
 	}
+	
 
 	@RequestMapping(value = "/admin**", method = RequestMethod.GET)
 	public ModelAndView adminPage() {
@@ -39,6 +51,15 @@ public class MainController {
 		return model;
 
 	}
+	 @RequestMapping(value="/product", method = RequestMethod.POST)
+	    public String saveProduct(Product product ) {
+	    	
+	    	productService.save(product);
+	    	// Get it again....Demo Cascade
+	    	product = productService.find(product.getId());
+	    	
+	        return "ProductDetails";
+	    }
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView login(@RequestParam(value = "error", required = false) String error,
