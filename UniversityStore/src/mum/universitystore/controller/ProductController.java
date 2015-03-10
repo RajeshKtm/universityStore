@@ -8,14 +8,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class ProductController {
 
-	@RequestMapping(value = { "/", "/list" })
+	@RequestMapping(value = { "/", "/welcome" })
 	public String productList(Model model) {
 		return "welcome";
 	}
 
-	@RequestMapping(value = "/addProduct", method = RequestMethod.GET)
+	@RequestMapping(value = "/products/add", method = RequestMethod.GET)
 	public String addProduct() {
 		return "addProduct";
+	}
+	
+	@RequestMapping(value = "/products", method = RequestMethod.GET)
+	public String allProducts() {
+		return "products";
 	}
 
 }
