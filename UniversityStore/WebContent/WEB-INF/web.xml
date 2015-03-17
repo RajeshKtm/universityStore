@@ -4,6 +4,10 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	id="WebApp_ID" version="3.1">
 	<display-name>UniversityStore</display-name>
+<<<<<<< HEAD
+=======
+	
+>>>>>>> branch 'master' of https://github.com/RajeshKtm/universityStore.git
 	<servlet>
 		<servlet-name>spring-mvc</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -19,6 +23,14 @@
 		<servlet-name>spring-mvc</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+<!-- 	<context-param> -->
+<!--     	<param-name>contextConfigLocation</param-name> -->
+<!--     	<param-value>/WEB-INF/applicationContext.xml</param-value> -->
+<!--   </context-param> -->
+  
+<!--   <listener> -->
+<!--     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> -->
+<!--   </listener> -->
 
 	<error-page>
 		<error-code>404</error-code>
