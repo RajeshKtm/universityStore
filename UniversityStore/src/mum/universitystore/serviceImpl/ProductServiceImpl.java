@@ -16,28 +16,28 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class ProductServiceImpl implements ProductService {
 	
-	@Autowired
-	ProductRepository productRepository;
-	
-  	public List<Product> getAll() {
-		return (List<Product>) productRepository.findAll();
-	}
-	
-  	public List<Product> getAllProducts() {
-		return productRepository.getAllProducts();
-	}
-	
-	public void save(Product product) {
-		productRepository.save(product);
-		return ;
-	}
-	
-	
-	public Product find(Long id) {
-		return productRepository.findOne(id);
-	 
-	}
-	
+//	@Autowired
+//	ProductRepository productRepository;
+//	
+//  	public List<Product> getAll() {
+//		return (List<Product>) productRepository.findAll();
+//	}
+//	
+//  	public List<Product> getAllProducts() {
+//		return productRepository.getAllProducts();
+//	}
+//	
+//	public void save(Product product) {
+//		productRepository.save(product);
+//		return ;
+//	}
+//	
+//	
+//	public Product find(Long id) {
+//		return productRepository.findOne(id);
+//	 
+//	}
+//	
 	
 		   
 }
