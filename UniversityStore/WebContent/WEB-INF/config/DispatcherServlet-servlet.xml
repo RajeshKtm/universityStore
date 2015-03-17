@@ -11,7 +11,12 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-	<context:component-scan base-package="mum.universitystore" />
+	<context:component-scan base-package="mum.universitystore" >
+	
+	
+	  <!-- <context:include-filter type="aspectj" expression="mum.universitystore.*" /> -->
+	 </context:component-scan>
+	 
 	<mvc:annotation-driven />
 
 	<mvc:resources mapping="/resources/**" location="/resources/" />

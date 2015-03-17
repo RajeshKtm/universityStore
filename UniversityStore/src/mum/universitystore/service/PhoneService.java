@@ -9,12 +9,12 @@ import mum.universitystore.model.Phone;
 
  public interface PhoneService   {
 	
-//	public List<Phone> getAll();
-//	
-//	public void save(Phone phone);
+	public List<Phone> getAll();
+	
+	public void save(Phone phone);
 	
 	
-
+    
 	 
 }
  

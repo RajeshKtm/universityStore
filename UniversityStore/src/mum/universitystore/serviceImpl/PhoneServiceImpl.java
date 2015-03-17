@@ -16,17 +16,18 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class PhoneServiceImpl implements PhoneService {
 	
-//	@Autowired
-//	PhoneRepository phoneRepository;
-//	
-//  	public List<Phone> getAll() {
-//		return  (List<Phone>) phoneRepository.findAll();
-//	}
-//	
-//	public void save(Phone phone) {
-//		phoneRepository.save(phone);
-//		return ;
-//	}
+	@Autowired(required=true)
+	PhoneRepository phoneRepository;
+	
+  	public List<Phone> getAll() {
+  		//return null;
+		return  (List<Phone>) phoneRepository.findAll();
+	}
+	
+	public void save(Phone phone) {
+		phoneRepository.save(phone);
+		//return ;
+	}
 	
 	
 		   
