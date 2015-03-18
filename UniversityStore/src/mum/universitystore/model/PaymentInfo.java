@@ -31,9 +31,11 @@ public class PaymentInfo {
 	private String address2;
 	@NotNull(message="{PaymentInfo.state.validation}")
 	private String state;
-	@NotNull(message="{PaymentInfo.lName.validation}")
+	@NotNull(message="{PaymentInfo.zip.validation}")
 	private String zip;
+	@NotNull(message="{PaymentInfo.country.validation}")
 	private String country;
+	@NotNull(message="{PaymentInfo.mail.validation}")
 	private String email;
 	@Temporal(TemporalType.DATE)
 	private java.util.Date expirationDate;
