@@ -1,6 +1,7 @@
 package mum.universitystore.controller;
 
 import java.util.List;
+import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -11,6 +12,7 @@ import mum.universitystore.service.CategoryService;
 import mum.universitystore.service.ProductService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -45,17 +47,24 @@ public class ProductController {
 	   return "addProduct";
 	}
 	
+	@RequestMapping
+	public String list(Model model) {
+		model.addAttribute("products", productService.getAllProducts());
+		return "products";
+	}
+	
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String processAddNewProductForm(@ModelAttribute("newProduct") @Valid Product newProduct, BindingResult result, HttpServletRequest request) {
 		if(result.hasErrors()) {
 			return "addProduct";
 		}
-
-		String[] suppressedFields = result.getSuppressedFields();
-		
-		if (suppressedFields.length > 0) {
-			throw new RuntimeException("Attempting to bind disallowed fields: " + StringUtils.arrayToCommaDelimitedString(suppressedFields));
-		}
+		System.out.println(newProduct);
+		System.out.println(newProduct.getCategory());
+//		String[] suppressedFields = result.getSuppressedFields();
+//		
+//		if (suppressedFields.length > 0) {
+//			throw new RuntimeException("Attempting to bind disallowed fields: " + StringUtils.arrayToCommaDelimitedString(suppressedFields));
+//		}
 		
 //		MultipartFile productImage = newProduct.getProductImage();
 //		String rootDirectory = request.getSession().getServletContext().getRealPath("/");
@@ -67,7 +76,7 @@ public class ProductController {
 //				throw new RuntimeException("Product Image saving failed", e);
 //		   }
 //		   }
-
+		
 	   	productService.addProduct(newProduct);
 		return "redirect:/products";
 	}
