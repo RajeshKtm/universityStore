@@ -30,11 +30,7 @@ public class ProductController {
 		return "addProduct";
 	}
 	
-	@RequestMapping(value="/CatListWithProd",method=RequestMethod.GET)
-	public String catWiseProducts(){
-		
-		return "catListWithProd";
-	}
+	
 	
 //	@RequestMapping("products/{categoryid}")
 //	public String getProductsByCategory(Model model,@PathVariable("categoryid")long categoryId) {
