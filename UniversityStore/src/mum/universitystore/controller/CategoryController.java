@@ -54,6 +54,14 @@ public class CategoryController {
 		return "redirect:/categories";
 	}
 	
+	@RequestMapping
+	public String listCategories(Model model){
+		List<Category> categories = categoryService.getAllCategory();
+		System.out.println(categories);
+		model.addAttribute("categories", categories);
+		return "CategoryAndProduct";
+	}
+	
 	@RequestMapping(value = "/CatListWithProd", method = RequestMethod.GET)
 	public String catListWithProduct(Model model){
 		model.addAttribute("categories",categoryService.getAllCategory());
