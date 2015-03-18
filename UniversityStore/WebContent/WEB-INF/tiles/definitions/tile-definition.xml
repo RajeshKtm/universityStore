@@ -18,5 +18,16 @@
 		<put-attribute name="heading" value="Home Page" />
 		<put-attribute name="content" value="/WEB-INF/views/welcome.jsp" />
 	</definition>
+	<definition name="addProduct" extends="baseLayout">
+		<put-attribute name="title" value="Welcome to MUM University Store" />
+		<put-attribute name="heading" value=" Add Product" />
+		<put-attribute name="content" value="/WEB-INF/views/product.jsp" />
+	</definition>
+	
+	<definition name="catListWithProd" extends="baseLayout">
+		<put-attribute name="title" value="Category List With Products" />
+		<put-attribute name="heading" value="Category with Products" />
+		<put-attribute name="content" value="/WEB-INF/views/categorywithproducts.jsp" />
+	</definition>
 
 </tiles-definitions>

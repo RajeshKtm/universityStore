@@ -14,14 +14,14 @@
 <title>Products</title>
 </head>
 <body>
-	<section class="container">
+	<div class="container">
 
 		<div class="row">
-			<div class="col-md-5">
+			<%-- <div class="col-md-5">
 				<img
 					src="<c:url value="/resource/images/${product.productId}.png"></c:url>"
 					alt="image" style="width: 100%" />
-			</div>
+			</div> --%>
 
 			<div class="col-md-5">
 				<h3>${product.name}</h3>
@@ -42,6 +42,7 @@
 					<strong>Availble units in stock </strong> : ${product.unitsInStock}
 				</p>
 				<h4>${product.unitPrice}USD</h4>
+				
 				<p ng-controller="cartCtrl">
 					<a href="#" class="btn btn-warning btn-large"
 						onclick="addToCart('${product.productId}')"> <span
@@ -57,6 +58,6 @@
 			</div>
 		</div>
 		<!--/div-->
-	</section>
+	</div>
 </body>
 </html>

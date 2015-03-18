@@ -23,7 +23,7 @@
 			<ul class="nav nav-pills pull-right">
 				<tiles:insertAttribute name="navigation"/>
 			</ul>
-			<h3 class="text-muted">Web Store</h3>
+			<h3 class="text-muted">MUM University Store</h3>
 		</div>
 
 		<div class="jumbotron">
