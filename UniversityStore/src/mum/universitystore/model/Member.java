@@ -11,6 +11,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Entity(name = "MEMBER")
@@ -32,6 +33,7 @@ public class Member {
 	private int age;
 	@Column(name = "TITLE")
 	private String title;
+	@Pattern(regexp="\\(?([0-9]{3})\\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", message="{Member.phone.validation}")
 	@Column(name = "PHONENUMBER")
 	private String phoneNumber;
 
