@@ -2,14 +2,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"  %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet"	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-<title>Products</title>
-</head>
-<body>
-	
 	<section class="container">
 		<form:form  modelAttribute="newProduct" class="form-horizontal" enctype="multipart/form-data">
 			<fieldset>
@@ -98,5 +90,4 @@
 			</fieldset>
 		</form:form>
 	</section>
-</body>
-</html>
+
