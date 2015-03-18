@@ -37,6 +37,12 @@ public class ProductServiceImpl implements ProductService {
 		return productRepository.findOne(id);
 	 
 	}
+
+	
+	public List<Product> getProductsByCategoryID(long ID) {
+		// TODO Auto-generated method stub
+		return productRepository.getProductsByCategoryID( ID);
+	}
 	
 	
 		   
