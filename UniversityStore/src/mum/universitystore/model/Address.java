@@ -21,7 +21,7 @@ public class Address {
 	private String city;
 	@NotNull(message="{NotNull.Address.state.validation}")
 	private String state;
-	@NotNull(message="{NotNull.Address.zicoder.validation}")
+	@NotNull(message="{NotNull.Address.zicode.validation}")
 	private String zipCode;
 
 	public String getStreet() {
