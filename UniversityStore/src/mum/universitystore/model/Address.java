@@ -15,13 +15,13 @@ public class Address {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
-	@NotNull(message="{Address.street.validation}")
+	@NotNull(message="{NotNull.Address.street.validation}")
 	private String street;
-	@NotNull(message="{Address.city.validation}")
+	@NotNull(message="{NotNull.Address.city.validation}")
 	private String city;
-	@NotNull(message="{Address.state.validation}")
+	@NotNull(message="{NotNull.Address.state.validation}")
 	private String state;
-	@NotNull(message="{Address.zicoder.validation}")
+	@NotNull(message="{NotNull.Address.zicoder.validation}")
 	private String zipCode;
 
 	public String getStreet() {

@@ -32,17 +32,17 @@ public class Product {
 	@GeneratedValue
 	private Long id;
 
-	@Size(min = 4, max = 50, message = "{Product.name.validation}")
+	@Size(min = 4, max = 50, message = "{Size.Product.name.validation}")
 	private String name;
 	//
 	// @Min(value = 0, message = "Min.Product.unitPrice.validation}")
 	// @Digits(integer = 8, fraction = 2, message =
 	// "{Digits.Product.unitPrice.validation}")
-	@NotNull(message = "{Product.unitPrice.validation}")
+	@NotNull(message = "{NotNull.Product.unitPrice.validation}")
 	private BigDecimal unitPrice;
 	private String description;
 	private String manufacturer;
-	@NotNull(message = "{Product.stock.validation}")
+	@Min(value =  0 )
 	private Long unitsInStock;
 	private Long unitsInOrder;
 	private Boolean discontinued;
