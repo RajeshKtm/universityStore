@@ -47,4 +47,10 @@ public class ProductServiceImpl implements ProductService {
 		return;
 	}
 
+	@Override
+	public List<Product> getProductsByCategoryID(Long ID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
