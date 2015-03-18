@@ -18,15 +18,14 @@
 	<div
 		style="border: 1px solid; border-radius: 25px; width: 50%; float: left">
 		<p>Category List:</p>
-		<form:form modelAttribute="category" action="" method="get">
-
-			<a href="<spring:url value="/welcome"/>"> Book</a>
+		<form:form modelAttribute="categoryItem" action="" method="get">
 
 			<c:forEach items="${categories}" var="category">
-				<form:label path="categoryId">Category Name : </form:label>
-				<c:out value="${category.name}" />
-				<br />
-				<a href="<spring:url value='/category/${category.id}'/>">"${category}"</a>
+				<label for="name">Category Name: </label>
+				<%-- 				<form:label path=""> Category Name : </form:label> --%>
+				<%-- 				<c:out value="${category.name}" /> <br /> --%>
+
+				<a href="<spring:url value='/category/${category.id}'/>">${category.name}</a>
 				<br />
 			</c:forEach>
 
@@ -38,8 +37,7 @@
 		style="border: 1px solid; border-radius: 25px; width: 50%; float: right">
 		<p>Product List:</p>
 		<form:form modelAttribute="product" action="" method="get">
-			<a
-				href="<spring:url value="/welcome"/>">Spring MVC</a>
+			<a href="<spring:url value="/welcome"/>">Spring MVC</a>
 
 			<%-- 			<c:foreach items="${categories}" var="category"> --%>
 			<%-- 			<c:out value="${category}" /> <br/> --%>

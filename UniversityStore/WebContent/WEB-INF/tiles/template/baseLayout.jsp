@@ -28,10 +28,10 @@
 
 		<div class="jumbotron">
 			<h1>
-				<tiles:insertAttribute name="heading" />
+				<tiles:insertAttribute name="heading"/>
 			</h1>
 			<p>
-				<tiles:insertAttribute name="tagline" />
+				<tiles:insertAttribute name="tagline"/>
 			</p>
 		</div>
 
