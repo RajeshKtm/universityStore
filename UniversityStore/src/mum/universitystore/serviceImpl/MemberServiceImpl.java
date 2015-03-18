@@ -38,7 +38,8 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	public Member findByMemberNumber(int memberId) {
-		return memberRepository.findByMemberNumber(memberId);
+		// return memberRepository.findByMemberNumber(memberId);
+		return null;
 	}
 
 }
