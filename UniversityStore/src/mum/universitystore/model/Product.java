@@ -34,10 +34,11 @@ public class Product {
 
 	@Size(min = 4, max = 50, message = "{Size.Product.name.validation}")
 	private String name;
-//
-//	@Min(value = 0, message = "Min.Product.unitPrice.validation}")
-//	@Digits(integer = 8, fraction = 2, message = "{Digits.Product.unitPrice.validation}")
-//	@NotNull(message = "{NotNull.Product.unitPrice.validation}")
+	//
+	// @Min(value = 0, message = "Min.Product.unitPrice.validation}")
+	// @Digits(integer = 8, fraction = 2, message =
+	// "{Digits.Product.unitPrice.validation}")
+	// @NotNull(message = "{NotNull.Product.unitPrice.validation}")
 	private BigDecimal unitPrice;
 	private String description;
 	private String manufacturer;
@@ -112,14 +113,6 @@ public class Product {
 	public void setDiscontinued(Boolean discontinued) {
 		this.discontinued = discontinued;
 	}
-//
-//	public String getCondition() {
-//		return condition;
-//	}
-//
-//	public void setCondition(String condition) {
-//		this.condition = condition;
-//	}
 
 	public Category getCategory() {
 		return category;

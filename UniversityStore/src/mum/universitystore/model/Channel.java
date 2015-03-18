@@ -2,6 +2,7 @@ package mum.universitystore.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,18 +14,20 @@ import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
 @Entity
-public class Category {
-
+public class Channel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-    
-	@Column(name="category_name")
+
+	@Column(name = "channel_name")
 	private String name;
 
-	@OneToMany(mappedBy = "category")
-	@LazyCollection(LazyCollectionOption.FALSE)
-	private List<Product> products;
+//	@OneToMany(mappedBy = "channel", cascade = CascadeType.PERSIST)
+//	@LazyCollection(LazyCollectionOption.TRUE)
+//	private List<Order> orders;
+
+	@Column(name = "shipment_charge")
+	private float charge;
 
 	public Long getId() {
 		return id;
@@ -42,12 +45,21 @@ public class Category {
 		this.name = name;
 	}
 
-	public List<Product> getProducts() {
-		return products;
+	public float getCharge() {
+		return charge;
 	}
 
-	public void setProducts(List<Product> products) {
-		this.products = products;
+	public void setCharge(float charge) {
+		this.charge = charge;
 	}
+
+//	public List<Order> getOrders() {
+//		return orders;
+//	}
+//
+//	public void setOrders(List<Order> orders) {
+//		this.orders = orders;
+//	}
 
 }
+
