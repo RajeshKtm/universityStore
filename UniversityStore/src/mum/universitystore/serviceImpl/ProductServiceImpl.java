@@ -2,6 +2,7 @@ package mum.universitystore.serviceImpl;
 
 import java.util.List;
 
+import mum.universitystore.model.Category;
 import mum.universitystore.model.Product;
 import mum.universitystore.repository.ProductRepository;
 import mum.universitystore.service.ProductService;
@@ -37,6 +38,13 @@ public class ProductServiceImpl implements ProductService {
 		return productRepository.findOne(id);
 	 
 	}
+
+	@Override
+	public void addProduct(Product product) {
+		productRepository.save(product);
+		return ;
+	}
+
 	
 	
 		   

@@ -1,58 +1,132 @@
 package mum.universitystore.model;
-import java.io.Serializable;
 
-import javax.persistence.CascadeType;
+import java.math.BigDecimal;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
-public class Product implements Serializable {
-    private static final long serialVersionUID = 5784L;
+@Table(name = "PRODUCT")
+@XmlRootElement
+public class Product {
 
+	// @Pattern(regexp="P[1-9]+",
+	// message="{Pattern.Product.productId.validation}")
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-    private long id;
+	@Column(name = "PRODUCT_ID")
+	@GeneratedValue
+	private Long id;
+
+	@Size(min = 4, max = 50, message = "{Size.Product.name.validation}")
 	private String name;
-    private String description;
-    private float price;
+//
+//	@Min(value = 0, message = "Min.Product.unitPrice.validation}")
+//	@Digits(integer = 8, fraction = 2, message = "{Digits.Product.unitPrice.validation}")
+//	@NotNull(message = "{NotNull.Product.unitPrice.validation}")
+	private BigDecimal unitPrice;
+	private String description;
+	private String manufacturer;
+	private Long unitsInStock;
+	private Long unitsInOrder;
+	private Boolean discontinued;
+//	private String condition;
+	@ManyToOne
+	@JoinColumn(name = "CATEGORY_ID", referencedColumnName = "id")
+	private Category category;
 
-    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name="phone_id")
-    private Phone hotLine;
-
-    public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+
+	public void setId(Long id) {
 		this.id = id;
 	}
-    public String getName() {
+
+	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-    public String getDescription() {
-        return description;
-    }
-    public void setDescription(String description) {
-        this.description = description;
-    }
-    public float getPrice() {
-        return price;
-    }
-    public void setPrice(float price) {
-        this.price = price;
-    }
-	public Phone getHotLine() {
-		return hotLine;
+
+	public BigDecimal getUnitPrice() {
+		return unitPrice;
 	}
-	public void setHotLine(Phone hotLine) {
-		this.hotLine = hotLine;
+
+	public void setUnitPrice(BigDecimal unitPrice) {
+		this.unitPrice = unitPrice;
 	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getManufacturer() {
+		return manufacturer;
+	}
+
+	public void setManufacturer(String manufacturer) {
+		this.manufacturer = manufacturer;
+	}
+
+	public Long getUnitsInStock() {
+		return unitsInStock;
+	}
+
+	public void setUnitsInStock(Long unitsInStock) {
+		this.unitsInStock = unitsInStock;
+	}
+
+	public Long getUnitsInOrder() {
+		return unitsInOrder;
+	}
+
+	public void setUnitsInOrder(Long unitsInOrder) {
+		this.unitsInOrder = unitsInOrder;
+	}
+
+	public Boolean getDiscontinued() {
+		return discontinued;
+	}
+
+	public void setDiscontinued(Boolean discontinued) {
+		this.discontinued = discontinued;
+	}
+//
+//	public String getCondition() {
+//		return condition;
+//	}
+//
+//	public void setCondition(String condition) {
+//		this.condition = condition;
+//	}
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
 }
