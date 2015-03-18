@@ -10,6 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class PaymentInfo {
@@ -21,11 +22,16 @@ public class PaymentInfo {
 	@JoinColumn(name = "customer", referencedColumnName = "id")
 	private Member member;
 
+	@NotNull(message="{PaymentInfo.fName.validation}")
 	private String firstName;
+	@NotNull(message="{PaymentInfo.lName.validation}")
 	private String lastName;
+	@NotNull(message="{PaymentInfo.add1.validation}")
 	private String address1;
 	private String address2;
+	@NotNull(message="{PaymentInfo.state.validation}")
 	private String state;
+	@NotNull(message="{PaymentInfo.lName.validation}")
 	private String zip;
 	private String country;
 	private String email;

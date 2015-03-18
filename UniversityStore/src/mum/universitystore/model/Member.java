@@ -1,6 +1,5 @@
 package mum.universitystore.model;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,71 +10,89 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Transient;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
-@Entity(name = "MEMBER") 
+@Entity(name = "MEMBER")
 public class Member {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="ID")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "ID")
 	private int id;
-	
-	@Column(name="FIRSTNAME")
+
+	@NotNull(message = "{Member.fName.validation}")
+	@Column(name = "FIRSTNAME")
 	private String firstName;
-	@Column(name="LASTNAME")
+	@NotNull(message = "{Member.lName.validation}")
+	@Column(name = "LASTNAME")
 	private String lastName;
-	@Column(name="AGE")
+	@Size(min = 15, max = 90, message = "{Member.age.validation}")
+	@Column(name = "AGE")
 	private int age;
-	@Column(name="TITLE")
+	@Column(name = "TITLE")
 	private String title;
-	@Column(name="MEMBERNUMBER")
-	private int memberNumber;
-	
-	@OneToOne(fetch=FetchType.LAZY) 
-	@JoinColumn(name="USERNAME") 
+	@Column(name = "PHONENUMBER")
+	private String phoneNumber;
+
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "USERNAME")
 	private Credentials credentials;
 
- 	public int getId() {
+	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getFirstName() {
 		return firstName;
 	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+
 	public String getLastName() {
 		return lastName;
 	}
+
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
 	public int getAge() {
 		return age;
 	}
+
 	public void setAge(int age) {
 		this.age = age;
 	}
- 	public String getTitle() {
+
+	public String getTitle() {
 		return title;
 	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public int getMemberNumber() {
-		return memberNumber;
+
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
-	public void setMemberNumber(int memberNumber) {
-		this.memberNumber = memberNumber;
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
+
 	public Credentials getCredentials() {
 		return credentials;
 	}
+
 	public void setCredentials(Credentials credentials) {
 		this.credentials = credentials;
 	}
- 
+
 }

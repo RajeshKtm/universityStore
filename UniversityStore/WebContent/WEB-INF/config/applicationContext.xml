@@ -13,7 +13,6 @@
 		and creates implementations for use at runtime. -->
 	<jpa:repositories base-package="mum.universitystore.repository" />
 
-
 	<!-- Creates a JPA EntityManagerFactory according to JPA's standard container 
 		bootstrap contract. This is the most powerful way to set up a shared JPA 
 		EntityManagerFactory in a Spring application context; -->
