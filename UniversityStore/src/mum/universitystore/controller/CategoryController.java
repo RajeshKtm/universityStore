@@ -53,5 +53,11 @@ public class CategoryController {
 		categoryService.addCategory(newCategory);
 		return "redirect:/categories";
 	}
+	
+	@RequestMapping(value = "/CatListWithProd", method = RequestMethod.GET)
+	public String catListWithProduct(Model model){
+		model.addAttribute("categories",categoryService.getAllCategory());
+		return "catListWithProd";
+	}
 
 }

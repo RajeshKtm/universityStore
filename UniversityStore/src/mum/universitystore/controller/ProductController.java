@@ -72,11 +72,11 @@ public class ProductController {
 		return "redirect:/products";
 	}
 	
-	@RequestMapping("products/{categoryid}")
-	public @ResponseBody List<Product> getProductsByCategory(@PathVariable("categoryid")long categoryId) {
-		return productService.getProductsByCategoryID(categoryId);
-	
-	}
+//	@RequestMapping("/{categoryid}")
+//	public @ResponseBody List<Product> getProductsByCategory(@PathVariable("categoryid")long categoryId) {
+//		return productService.getProductsByCategoryID(categoryId);
+//	
+//	}
 	   
 	@RequestMapping(value = { "/", "/list" })
 	public String productList(Model model) {

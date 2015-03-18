@@ -23,7 +23,7 @@
 			<a href="<spring:url value="/welcome"/>"> Book</a>
 
 			<c:forEach items="${categories}" var="category">
-							<form:label path="orderId">${order.orderId} </form:label>
+				<form:label path="categoryId">Category Name : </form:label>
 				<c:out value="${category.name}" />
 				<br />
 				<a href="<spring:url value='/category/${category.id}'/>">"${category}"</a>
