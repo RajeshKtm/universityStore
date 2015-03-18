@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CategoryRepository extends CrudRepository<Category, Long> {
-		    @Query(value = "select distinct c from Category c")
-			List<Category> getAllCategory();
+	
+	 @Query(value = "select distinct c from Category c")
+	 List<Category> getAllCategory();
 }

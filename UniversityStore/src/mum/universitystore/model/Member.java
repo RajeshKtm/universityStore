@@ -11,6 +11,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Entity(name = "MEMBER")
@@ -21,17 +22,18 @@ public class Member {
 	@Column(name = "ID")
 	private int id;
 
-	@NotNull(message = "{Member.fName.validation}")
+	@NotNull(message = "{NotNull.Member.fName.validation}")
 	@Column(name = "FIRSTNAME")
 	private String firstName;
-	@NotNull(message = "{Member.lName.validation}")
+	@NotNull(message = "{NotNull.Member.lName.validation}")
 	@Column(name = "LASTNAME")
 	private String lastName;
-	@Size(min = 15, max = 90, message = "{Member.age.validation}")
+	@Size(min = 15, max = 90, message = "{Size.Member.age.validation}")
 	@Column(name = "AGE")
 	private int age;
 	@Column(name = "TITLE")
 	private String title;
+	@Pattern(regexp="\\(?([0-9]{3})\\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", message="{Pattern.Member.phone.validation}")
 	@Column(name = "PHONENUMBER")
 	private String phoneNumber;
 

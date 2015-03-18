@@ -19,6 +19,7 @@ public class HomeController {
 		model.addAttribute("greeting", "Welcome to our community, Kimosabe!!");
 		model.addAttribute("tagline",
 				"The one and only place to live, work and play!!");
+
 		return "welcome";
 	}
 

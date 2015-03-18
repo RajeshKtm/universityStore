@@ -22,18 +22,20 @@ public class PaymentInfo {
 	@JoinColumn(name = "customer", referencedColumnName = "id")
 	private Member member;
 
-	@NotNull(message="{PaymentInfo.fName.validation}")
+	@NotNull(message="{NotNull.PaymentInfo.fName.validation}")
 	private String firstName;
-	@NotNull(message="{PaymentInfo.lName.validation}")
+	@NotNull(message="{NotNull.PaymentInfo.lName.validation}")
 	private String lastName;
-	@NotNull(message="{PaymentInfo.add1.validation}")
+	@NotNull(message="{NotNull.PaymentInfo.add1.validation}")
 	private String address1;
 	private String address2;
-	@NotNull(message="{PaymentInfo.state.validation}")
+	@NotNull(message="{NotNull.PaymentInfo.state.validation}")
 	private String state;
-	@NotNull(message="{PaymentInfo.lName.validation}")
+	@NotNull(message="{NotNull.PaymentInfo.zip.validation}")
 	private String zip;
+	@NotNull(message="{NotNull.PaymentInfo.country.validation}")
 	private String country;
+	@NotNull(message="{NotNull.PaymentInfo.mail.validation}")
 	private String email;
 	@Temporal(TemporalType.DATE)
 	private java.util.Date expirationDate;

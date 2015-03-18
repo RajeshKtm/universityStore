@@ -1,19 +1,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet"
-	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 <script type="text/javascript"
 	src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script type="text/javascript"
 	src="<spring:url value="/resource/js/cart.js"/>"></script>
 
-<title>Products</title>
-</head>
-<body>
 	<div class="container">
 
 		<div class="row">
@@ -59,5 +51,3 @@
 		</div>
 		<!--/div-->
 	</div>
-</body>
-</html>

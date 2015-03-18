@@ -38,10 +38,11 @@ public class Product {
 	// @Min(value = 0, message = "Min.Product.unitPrice.validation}")
 	// @Digits(integer = 8, fraction = 2, message =
 	// "{Digits.Product.unitPrice.validation}")
-	// @NotNull(message = "{NotNull.Product.unitPrice.validation}")
+	@NotNull(message = "{NotNull.Product.unitPrice.validation}")
 	private BigDecimal unitPrice;
 	private String description;
 	private String manufacturer;
+	@Min(value =  0 )
 	private Long unitsInStock;
 	private Long unitsInOrder;
 	private Boolean discontinued;
