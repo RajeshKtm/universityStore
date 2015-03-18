@@ -14,3 +14,6 @@ INSERT INTO authorities (username, authority) VALUES ('rabi', 'ROLE_USER');
 
 INSERT INTO  `MEMBER` VALUES (NULL,12,'Rajesh','Yadav', 8754,'Raj Pulsar','user');
 INSERT INTO `MEMBER` VALUES (NULL,123,'Rabi','Khadka', 8733,'Rabi Pulsar','admin');
+
+http://bcrypthashgenerator.apphb.com/
+for online converting of password to bcrypt hashcode.
