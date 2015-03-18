@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Address {
@@ -12,12 +14,14 @@ public class Address {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-
+	
+	@NotNull(message="{Address.street.validation}")
 	private String street;
+	@NotNull(message="{Address.city.validation}")
 	private String city;
-
+	@NotNull(message="{Address.state.validation}")
 	private String state;
-
+	@NotNull(message="{Address.zicoder.validation}")
 	private String zipCode;
 
 	public String getStreet() {
