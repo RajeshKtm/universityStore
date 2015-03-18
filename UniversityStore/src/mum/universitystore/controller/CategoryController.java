@@ -56,7 +56,14 @@ public class CategoryController {
 	
 	@RequestMapping(value = "/CatListWithProd", method = RequestMethod.GET)
 	public String catListWithProduct(Model model){
-		model.addAttribute("categories",categoryService.getAllCategory());
+		
+		List<Category> ls=categoryService.getAllCategory();
+		model.addAttribute("categories", ls);
+		
+		
+		
+		System.out.println(ls.size());
+		
 		return "catListWithProd";
 	}
 
