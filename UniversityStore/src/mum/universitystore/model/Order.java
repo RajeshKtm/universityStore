@@ -1,6 +1,5 @@
 package mum.universitystore.model;
 
-
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -38,6 +37,53 @@ public class Order {
 	
 	@OneToOne(optional=true,cascade=CascadeType.ALL)
 	private Shipment shipment;
-	
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Channel getChannel() {
+		return channel;
+	}
+
+	public void setChannel(Channel channel) {
+		this.channel = channel;
+	}
+
+	public Member getUser() {
+		return user;
+	}
+
+	public void setUser(Member user) {
+		this.user = user;
+	}
+
+	public Date getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
+	}
+
+	public Boolean getIsPaid() {
+		return isPaid;
+	}
+
+	public void setIsPaid(Boolean isPaid) {
+		this.isPaid = isPaid;
+	}
+
+	public Shipment getShipment() {
+		return shipment;
+	}
+
+	public void setShipment(Shipment shipment) {
+		this.shipment = shipment;
+	}
 	
 }
