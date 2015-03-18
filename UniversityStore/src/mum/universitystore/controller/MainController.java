@@ -3,7 +3,6 @@ package mum.universitystore.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import mum.universitystore.model.Product;
-import mum.universitystore.service.PhoneService;
 import mum.universitystore.service.ProductService;
 
 import org.springframework.beans.factory.annotation.Autowired;
