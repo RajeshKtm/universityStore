@@ -48,6 +48,10 @@ public class Product {
 	@ManyToOne
 	@JoinColumn(name = "CATEGORY_ID", referencedColumnName = "id")
 	private Category category;
+	
+//	@ManyToOne
+//	@JoinColumn(name = "category", referencedColumnName = "id")
+//	private Category category;
 
 	public Long getId() {
 		return id;
