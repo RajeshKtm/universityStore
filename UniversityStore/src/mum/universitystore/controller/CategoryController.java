@@ -10,6 +10,7 @@ import mum.universitystore.model.Product;
 import mum.universitystore.service.CategoryService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -28,6 +29,7 @@ public class CategoryController {
 	// @Autowired
 	// private ProductValidator productValidator;
 
+	//@PreAuthorize(value = "ROLE_ADMIN")
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String getAddNewCategoryForm(
 			@ModelAttribute("newCategory") Category newCategory, Model model) {
@@ -35,6 +37,7 @@ public class CategoryController {
 		return "addCategory";
 	}
 
+	//@PreAuthorize(value = "ROLE_ADMIN")
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String processAddNewProductForm(@Valid Category newCategory,
 			BindingResult result, HttpServletRequest request) {

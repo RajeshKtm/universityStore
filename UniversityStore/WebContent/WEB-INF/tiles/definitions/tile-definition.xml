@@ -29,6 +29,12 @@
 		<put-attribute name="heading" value="Category with Products" />
 		<put-attribute name="content" value="/WEB-INF/views/categorywithproducts.jsp" />
 	</definition>
+	
+	<definition name="addCategory" extends="baseLayout">
+		<put-attribute name="title" value="Add Category" />
+		<put-attribute name="heading" value="Add Category" />
+		<put-attribute name="content" value="/WEB-INF/views/addCategory.jsp" />
+	</definition>
 	<definition name="login" extends="baseLayout">
 		<put-attribute name="title" value="Login" />
 		<put-attribute name="heading" value="Login" />

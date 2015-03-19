@@ -37,9 +37,9 @@ public class ProductController {
 	private CategoryService categoryService;
 	
 //	@Autowired
-//	private ProductValidator productValidator;
+//	private ProductValidator productValidator;;
 	
-	@PreAuthorize(value = "ROLE_ADMIN")
+	//@PreAuthorize(value = "ROLE_ADMIN")
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String getAddNewProductForm(@ModelAttribute("newProduct") Product newProduct, Model model) {
 		List<Category> categories = categoryService.getAllCategory();
@@ -55,7 +55,7 @@ public class ProductController {
 		return "products";
 	}
 	
-	@PreAuthorize(value = "ROLE_ADMIN")
+	//@PreAuthorize(value = "ROLE_ADMIN")
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String processAddNewProductForm(@ModelAttribute("newProduct") @Valid Product newProduct, BindingResult result, HttpServletRequest request) {
 		if(result.hasErrors()) {
