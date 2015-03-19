@@ -22,4 +22,15 @@ public class HomeController {
 
 		return "welcome";
 	}
+
+	@RequestMapping(value = "/admin/dashboard")
+	public String adminDashBoard(Model model) {
+		return "adminDashBoard";
+	}
+
+	@RequestMapping(value = "/member/dashboard")
+	public String getMemberProfile(Model model) {
+		return "userProfile";
+	}
+
 }
