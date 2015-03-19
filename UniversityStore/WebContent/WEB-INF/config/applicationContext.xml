@@ -8,7 +8,7 @@
  	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
       http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
- 
+
 	<!-- The jpa:repositories scans for all interfaces that extend JpaRepository 
 		and creates implementations for use at runtime. -->
 	<jpa:repositories base-package="mum.universitystore.repository" />
@@ -36,7 +36,7 @@
 				<!-- hibernate.dialect. This property makes Hibernate generate the appropriate 
 					SQL for the chosen database. -->
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
-				<prop key="hibernate.hbm2ddl.import_files">populate.sql</prop>
+				<!-- prop key="hibernate.hbm2ddl.import_files">populate.sql</prop -->
 			</props>
 		</property>
 	</bean>

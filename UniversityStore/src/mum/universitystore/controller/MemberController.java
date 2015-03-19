@@ -29,10 +29,10 @@ public class MemberController {
 		return "members";
 	}
 
-	@RequestMapping("/{memberNumber}")
-	public String getMemberById(
-			@PathVariable("memberNumber") Long memberNumber, Model model) {
-		Member member = memberService.findByMemberNumber(memberNumber);
+	@RequestMapping("/{id}")
+	public String getMemberById(@PathVariable("memberNumber") Long id,
+			Model model) {
+		Member member = memberService.findByMemberNumber(id);
 		model.addAttribute("member", member);
 		return "member";
 	}
