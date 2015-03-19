@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
@@ -22,6 +23,7 @@ public class Category {
 	@Column(name="category_name")
 	private String name;
 
+	@NotNull(message="{NotNull.Category.name.validation}")
 	@OneToMany(mappedBy = "category")
 	@LazyCollection(LazyCollectionOption.FALSE)
 	private List<Product> products;
