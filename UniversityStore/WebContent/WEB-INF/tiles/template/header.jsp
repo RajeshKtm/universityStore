@@ -5,7 +5,7 @@
 	<h1>
 		<tiles:insertAttribute name="heading" />
 	</h1>
-	<p>
+	<p> 
 		<tiles:insertAttribute name="introduction" />
 	</p>
 </div>

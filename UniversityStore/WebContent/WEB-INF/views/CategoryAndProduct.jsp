@@ -14,7 +14,7 @@
  
  
 <table>
-<tr>
+<tr> 
     <th>Category</th>
     <th>&nbsp;</th>
 </tr>

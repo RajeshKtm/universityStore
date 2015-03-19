@@ -8,6 +8,5 @@
 <li><a href="<spring:url value="/cart/"/>">Cart</a></li>
 </ul>
 &copy; Pulsar 2015, All Rights Reserved. <br />
-<img height="50" src="<spring:url value='/resources/images/pulsar.png'/>"
-					alt="MUM Store">
+<img height="50" src="<spring:url value='/resources/images/pulsar.png'/>" alt="MUM Store">
 </footer>

@@ -8,7 +8,7 @@
 <link rel="stylesheet"	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 <title>Products</title>
 </head>
-<body>
+<body> 
 	
 <!-- 	<section class="container"> -->
 <%-- 		<form:form  modelAttribute="newCategory" class="form-horizontal" enctype="multipart/form-data" action="add" method="POST" > --%>

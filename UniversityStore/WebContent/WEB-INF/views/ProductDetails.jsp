@@ -14,7 +14,7 @@
         Price: $${product.price}<br>
         Hot Line: ${product.hotLine.areaCode}-${product.hotLine.prefix}-${product.hotLine.number}
 
-    </p>
+    </p> 
     
     <form action="listproducts" method="get">
            <input id="submit" type="submit"  

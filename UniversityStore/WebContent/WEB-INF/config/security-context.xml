@@ -19,7 +19,7 @@
 	
 	<!-- can Use ControllerAdice instead -->
 	<!--security:access-denied-handler error-page="/error-forbidden" /-->
-	
+	 
 	<!-- Implemented with Web based URL - Controller "METHOD" level authorization -->
 	<!-- the more specific rules need to come first, followed by the more general ones. -->
 	<!-- COMmENT out the following to see @Service METHOD level authorization -->

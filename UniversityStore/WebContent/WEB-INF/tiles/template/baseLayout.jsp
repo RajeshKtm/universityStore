@@ -24,7 +24,7 @@
 					src="<spring:url value='/resources/images/logo.png'/>"
 					alt="MUM Store"></a>
 			</div>
-		</div>
+		</div> 
 		<nav>
 			<div class="container">
 				<ul class="nav nav-pills pull-right">

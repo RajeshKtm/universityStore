@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body> 
 	Hello User,welcome to your profile.Do you want to upload file.
 
 	<br /> You can upload your foto and further additionally you can also

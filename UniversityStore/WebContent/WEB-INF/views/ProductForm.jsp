@@ -1,6 +1,6 @@
 
 <form action="product" method="post">
-  
+   
         <p>
             <label for="name">Product Name: </label>
             <input type="text" id="name" name="name" 

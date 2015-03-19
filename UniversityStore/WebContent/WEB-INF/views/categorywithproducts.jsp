@@ -15,8 +15,7 @@
 <!-- </body> -->
 <!-- </html> -->
 <div>
-	<div
-		style="border: 1px solid; border-radius: 25px; width: 50%; float: left">
+	<div style="border: 1px solid; border-radius: 25px; width: 50%; float: left">
 		<p>Category List:</p>
 		<form:form modelAttribute="categoryItem" action="" method="get">
 

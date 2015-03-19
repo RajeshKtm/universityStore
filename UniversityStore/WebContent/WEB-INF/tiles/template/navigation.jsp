@@ -11,5 +11,5 @@
 </security:authorize> 
 
  <security:authorize access="isAnonymous()"> 
- 	<li class="login"><a href="<spring:url value='/login' />" >Login</a></li>
+ 	<li class="login"><a href="<spring:url value='/login' />" >Login</a></li> 
   </security:authorize>

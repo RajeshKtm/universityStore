@@ -17,7 +17,7 @@
 		<put-attribute name="title" value="Welcome to MUM University Store" />
 		<put-attribute name="introduction" value="L" />
 		<put-attribute name="content" value="/WEB-INF/views/welcome.jsp" />
-	</definition>
+	</definition> 
 	<definition name="addProduct" extends="baseLayout">
 		<put-attribute name="title" value="Add Product" />
 		<put-attribute name="heading" value=" Add Product" />

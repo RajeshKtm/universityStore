@@ -7,7 +7,7 @@
 		
 			
 				<form:errors path="*" cssClass="alert alert-danger" element="div"/>
-				<div class="form-group">
+				<div class="form-group"> 
 					<label class="control-label col-lg-2 col-lg-2" for="productId">ProductId:</label>
 					<div class="col-lg-10">
 						<form:input id="productId" path="id" type="text" class="form:input-large"/>
