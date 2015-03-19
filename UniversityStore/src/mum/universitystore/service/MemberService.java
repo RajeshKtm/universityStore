@@ -10,7 +10,7 @@ public interface MemberService {
 
 	public List<Member> findAll();
 
-	public Member findByMemberNumber(int memberId);
+	public Member findByMemberNumber(Long memberId);
 
-	public void saveFull(Member member);
+	public void saveAll(Member member);
 }

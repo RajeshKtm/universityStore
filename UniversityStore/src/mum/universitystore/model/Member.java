@@ -14,18 +14,20 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity(name = "MEMBER")
 public class Member {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "ID")
-	private int id;
+	private Long id;
 
 	@NotNull(message = "{NotNull.Member.fName.validation}")
 	@Column(name = "FIRSTNAME")
 	private String firstName;
-	@NotNull(message = "{NotNull.Member.lName.validation}")
+	@NotEmpty(message = "{NotNull.Member.lName.validation}")
 	@Column(name = "LASTNAME")
 	private String lastName;
 	@Size(min = 15, max = 90, message = "{Size.Member.age.validation}")
@@ -33,7 +35,7 @@ public class Member {
 	private int age;
 	@Column(name = "TITLE")
 	private String title;
-	@Pattern(regexp="\\(?([0-9]{3})\\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", message="{Pattern.Member.phone.validation}")
+	@Pattern(regexp = "\\(?([0-9]{3})\\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", message = "{Pattern.Member.phone.validation}")
 	@Column(name = "PHONENUMBER")
 	private String phoneNumber;
 
@@ -41,11 +43,11 @@ public class Member {
 	@JoinColumn(name = "USERNAME")
 	private Credentials credentials;
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

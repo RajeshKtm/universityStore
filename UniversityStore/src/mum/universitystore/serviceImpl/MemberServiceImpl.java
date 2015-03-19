@@ -23,7 +23,7 @@ public class MemberServiceImpl implements MemberService {
 	CredentialsService credentialsService;
 
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
-	public void saveFull(Member member) {
+	public void saveAll(Member member) {
 		credentialsService.save(member.getCredentials());
 		memberRepository.save(member);
 	}
@@ -37,9 +37,7 @@ public class MemberServiceImpl implements MemberService {
 		return (List<Member>) memberRepository.findAll();
 	}
 
-	public Member findByMemberNumber(int memberId) {
-		// return memberRepository.findByMemberNumber(memberId);
-		return null;
+	public Member findByMemberNumber(Long id) {
+		return memberRepository.findOne(id);
 	}
-
 }
