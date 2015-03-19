@@ -23,10 +23,10 @@ public class MemberController {
 	@Autowired
 	private MemberService memberService;
 
-	@RequestMapping
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String listMembers(Model model) {
 		model.addAttribute("members", memberService.findAll());
-		return "members";
+		return "listmembers";
 	}
 
 	@RequestMapping("/{id}")

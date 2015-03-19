@@ -35,6 +35,16 @@
 		<put-attribute name="heading" value="Add Category" />
 		<put-attribute name="content" value="/WEB-INF/views/addCategory.jsp" />
 	</definition>
+	<definition name="addMember" extends="baseLayout">
+		<put-attribute name="title" value="Add Member" />
+		<put-attribute name="heading" value="Add Member" />
+		<put-attribute name="content" value="/WEB-INF/views/addMember.jsp" />
+	</definition>
+	<definition name="listmembers" extends="baseLayout">
+		<put-attribute name="title" value="Member List" />
+<!-- 		<put-attribute name="heading" value="Member List" /> -->
+<!-- 		<put-attribute name="content" value="/WEB-INF/views/members.jsp" /> -->
+	</definition>
 	<definition name="login" extends="baseLayout">
 		<put-attribute name="title" value="Login" />
 		<put-attribute name="heading" value="Login" />

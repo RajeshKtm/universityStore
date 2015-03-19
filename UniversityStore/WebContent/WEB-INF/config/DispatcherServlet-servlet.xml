@@ -12,7 +12,7 @@
 
 
 
-	<mvc:annotation-driven /> 
+	<mvc:annotation-driven />
 	<context:component-scan base-package="mum.universitystore" />
 
 	<bean id="viewResolver"
@@ -57,7 +57,7 @@
 	</bean>
 
 	<mvc:resources location="/resources/" mapping="/resources/**" />
-
+	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<bean id="validator"
 		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
 		<property name="validationMessageSource" ref="messageSource" />

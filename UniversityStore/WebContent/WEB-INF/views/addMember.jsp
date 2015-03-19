@@ -2,34 +2,13 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"  %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet"	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-<title>Products</title>
-</head>
-<body>
-	<section>
-		<div class="jumbotron">
-			<div class="container">
-				<h1>Valued Members</h1>
-				<p>Add a new one<p>
-			</div>
-		</div>
-	</section>
-	<section class="container">
+
+	
+
 		<form:form  modelAttribute="newMember" class="form-horizontal"  >
-			<fieldset>
-				<legend>Add new member</legend>
+		
 
 				<form:errors path="*" cssClass="alert alert-danger" element="div"/>
-<!-- 				<div class="form-group"> -->
-<!-- 					<label class="control-label col-lg-2 col-lg-2" for="memberNumber"> Member Number</label> -->
-<!-- 					<div class="col-lg-10"> -->
-<%-- 						<form:input id="memberNumber" path="memberNumber" type="text" class="form:input-large"/> --%>
-<%-- 						<form:errors path="memberNumber" cssClass="text-danger"/> --%>
-<!-- 					</div> -->
-<!-- 				</div> -->
 
 				<div class="form-group">
 					<label class="control-label col-lg-2" for="firstName">First Name</label>
@@ -113,9 +92,6 @@
 						<input type="submit" id="btnAdd" class="btn btn-primary" value ="Add"/>
 					</div>
 				</div>
-				
-			</fieldset>
+		
 		</form:form>
-	</section>
-</body>
-</html>
+
