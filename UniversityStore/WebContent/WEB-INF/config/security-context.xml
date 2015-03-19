@@ -32,7 +32,7 @@
 
 <!-- Comment out login-page through logoinfailed for BASIC -->
 		<security:form-login   login-page="/login" 
-               default-target-url="/welcome"    
+               default-target-url="/member/dashboard"    
                always-use-default-target="true"   
                authentication-failure-url="/loginfailed"/>
         <security:logout logout-success-url="/logout"  logout-url= "/doLogout"/>

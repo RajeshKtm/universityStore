@@ -39,8 +39,7 @@
 						<form:textarea id="description" path="description" rows = "2"/>
 					</div>
 				</div>
-
-				<div class="form-group">
+    				<div class="form-group">
 					<label class="control-label col-lg-2" for="manufacturer">Manufacturer:</label>
 					<div class="col-lg-10">
 						<form:input id="manufacturer" path="manufacturer" type="text" class="form:input-large"/>
@@ -78,8 +77,6 @@
 <%-- 							class="form:input-large" /> --%>
 <!-- 					</div> -->
 <!-- 				</div> -->
-
-
 				<div class="form-group">
 				<label class=""> &nbsp;</label>
 					<div class="col-lg-10">

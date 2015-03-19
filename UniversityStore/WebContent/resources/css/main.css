@@ -98,6 +98,7 @@ nav{background:#2655BE;}
 nav ul li{display:inline-block; padding:10px;}
 nav ul li a{color:#F4E416; text-decoration:none; font-size:14px;}
 nav ul li a:hover{color:#fff;}
+nav ul li.login{float:right; color:#fff}
 
 .content{width:700px; float:left;}
 .sidebar{width:280px; float:right; }
@@ -114,9 +115,9 @@ footer ul li a{color:#222; text-decoration:underline; font-size:11px}
 footer ul li a:hover{text-decoration:none;}
 
 input[type="text"], input[type="password"], textarea, select{ width:300px;	border:1px solid #ccc; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; padding:5px 10px}
-form label{width:200px; float:left}	
+form label{width:150px; float:left}	
 .col-lg-10{float:left; width:390px; margin-bottom:5px;}
-input[type="submit"]{background:#2655BE; border:1px solid #ccc; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; padding:5px 10px; color:#fff}
+input[type="submit"]{cursor:pointer;background:#2655BE; border:1px solid #ccc; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; padding:5px 10px; color:#fff}
 
 #global {
     text-align: left;
